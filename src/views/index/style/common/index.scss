@@ -1,8 +1,188 @@
-
-body {
-    background: #f7f7f7;
+html,
+body,
+a,
+img,
+p,input,ul {
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: red;
+a,img{
+    display: block;
+    text-decoration:none;
+}
+.head {
+    background: #000000;
+    width: 100%;
+    overflow: hidden;
+    
+    .head-tou{
+        height: 35px;
+        background: #FFFFFF;
+        width: 100%;
+    }
+    .head-content {
+        margin: 0 auto;
+        background: antiquewhite;
+        height: 113px;
+        width: 90%;
+        overflow: hidden;
+    }
+    .head-img {
+        display: block;
+        height: px;
+        width: 211px;
+        margin-top: 18px;
+        float: left;
+    }
+    .head-text{
+        height: 30px;
+        width: 550px;
+         float: right;
+         border: 1px #919191 solid;
+         border-radius:20px;
+         margin-top:40px;
+    }
+    .head-txt {
+        height: 30px;
+        width: 500px;
+        border:0;
+        outline:none;
+        float: left;
+        border-radius:20px 0 0 20px;
+    }
+    .head-btn{
+        background:url("../mar/1 (20).png") no-repeat;
+        outline:none;
+        width:50px;
+        height: 30px;
+        float: left;
+        border-radius:0 20px 20px 0;
+        background-position: 20px 7px;
+        cursor:pointer;
+    }
+    .head-a{
+        width: 100px;
+        height: 42px;
+        display: block;
+        float: right;
+        color:rgb(145, 145, 145);
+        font-size: 12px;
+        text-decoration:none;
+        text-align: center;
+        line-height: 42px;
+        overflow: hidden;
+        margin: 33px 27px 0 35px;
+        background: #ffffff;
+        
+    }
+    .head-navi{//导航
+        background: #2b2b2b;
+        height: 35px;
+        width: 100%;
+        padding-left:37px ;
+        li{
+            list-style-type:none;
+           
+            float: left;
+            width: 120px;
+            margin-right:20px ;
+            
+            a{
+                line-height: 35px;
+                text-align: center;
+                text-decoration:none;
+                color:#eeeced;
+            }
+        }
+    }
+}
+.img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.content{
+    background: #e1e2e4;
+    overflow: hidden;
+
+    .content-title{
+        float: left;
+        width: 454px;
+        margin: 157px 90px 0 0;
+        span{
+            color: #383f45;
+            font-size: 30px;
+        }
+        p{
+            margin-top:10px ;
+            line-height: 55px;
+            font-size: 16px;
+            color:#64676e；
+        }
+        .content-middle{
+            overflow: hidden;
+            span{
+                width: 100px;
+                line-height: 74px;
+                float: left;
+                text-align: center;
+                border: 1px solid #000000;
+                border-radius: 10px;
+                margin:0 20px 0px 0;
+                display: block;
+                
+            }
+        }
+        .content-foor{
+            width: 269px;
+            overflow: hidden;
+            span{
+                color:"#333333";
+                font-size: 50px;
+                font-weight: bold;
+            }
+            a{
+                width: 103px;
+                line-height: 36px;
+                text-align: center;
+                background: #00a0e9;
+                color: #FFFFFF;
+                display: inline-block;
+                float: right;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+.main{
+    background: url("../mar/1 (4).jpg");
+    background-position: -300px 7px;
+    width:100%;
+    height:1040px;
+    overflow: hidden;
+    
+    .main-tilie{
+        width: 250px;
+        margin: 120px 0 0 145px;
+        p{
+            color: #00a1ea;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        span{
+            font-size: 18px;
+            line-height: 58px;
+            color: #FFFFFF;
+        }
+    }
+    .main-log{
+        margin: 130px 168px 0 211px;
+        span{
+            color：#ffffff;
+        }
+    }
 }
