@@ -62,8 +62,8 @@ a,img{
         cursor:pointer;
     }
     .head-a{
-        width: 100px;
-        height: 42px;
+        width: 156px;
+        height: 44px;
         display: block;
         float: right;
         color:rgb(145, 145, 145);
@@ -73,8 +73,9 @@ a,img{
         line-height: 42px;
         overflow: hidden;
         margin: 33px 27px 0 35px;
-        background: #ffffff;
-        
+        background:url("../mar/a.png") no-repeat ,url("../mar/a1.jpg") no-repeat #FFFFFF;
+        background-size:23px 21px,7px 4px ;
+        background-position:3px 11px,133px 21px ;
     }
     .head-navi{//导航
         background: #2b2b2b;
@@ -82,7 +83,7 @@ a,img{
         width: 100%;
         padding-left:37px ;
         li{
-            list-style-type:none;
+            
            
             float: left;
             width: 120px;
@@ -116,7 +117,7 @@ a,img{
         }
         p{
             margin-top:10px ;
-            line-height: 55px;
+            line-height: 46px;
             font-size: 16px;
             color:#64676e；
         }
@@ -181,8 +182,133 @@ a,img{
     }
     .main-log{
         margin: 130px 168px 0 211px;
-        span{
-            color：#ffffff;
+        
+        a{
+            float: left;
+        }
+        .log-a{  
+            float: left;  
+            margin-top:94px ;
+            margin-left:10px ;
+            span{
+                color: #FFFFFF;
+                font-size: 18px;
+            }
+            p{
+                color: #a2a89c;
+            }
+        }
+    }
+    .main-zhen{
+        width: 603px;
+        overflow: hidden;
+        div{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        .zhen1{
+            position: relative;
+            background: url("../mar/1 (15).png");
+            .din-1{
+                position: absolute;
+                bottom: 54px;
+                height: 30px;
+            }
+            p{
+                width: 300px;
+                color: #FFFFFF;
+                text-align: center;
+            }
+            span{
+                display: block;
+                width: 100%;
+                color: rgb(73, 110, 232);
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .zhen2{
+            position: relative;
+            background: url("../mar/1 (17).png");
+             .din-2{
+                position: absolute;
+                bottom: 54px;
+                height: 30px;
+            }
+            p{
+                color: #FFFFFF;
+                text-align: center;
+            }
+            span{
+                display: block;
+                width: 100%;
+                color:#495348;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .zhen3{
+            position: relative;
+            background: url("../mar/1 (17).png");
+             .din-3{
+                position: absolute;
+                bottom: 54px;
+                height: 30px;
+            }
+            p{
+                color: #FFFFFF;
+                text-align: center;
+            }
+            span{
+                display: block;
+                width: 100%;
+                color:#495348;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .zhen4{
+            position: relative;
+            background: url("../mar/1 (19).png");
+            .din-4{
+                position: absolute;
+                bottom: 54px;
+                height: 30px;
+            }
+            p{
+                color: #FFFFFF;
+                text-align: center;
+            }
+            span{
+                display: block;
+                width: 100%;
+                color:#495348;
+                font-size: 12px;
+                text-align: center;
+            }
         }
     }
 }
+
+
+
+    .footer{
+        background: #0e0d0b;
+        width: 100%;
+       .footer-tou{
+            background: #FF69B4;
+            margin: 0 auto;
+            height: 173px;
+            width: 1200px;
+            border-top: #00a0ea 2px solid;
+            border-bottom: #403f3d 1px solid;
+            
+            ul{
+                li{
+                    list-style-type:none;
+                    float: left;
+                }
+            }
+       } 
+    }
