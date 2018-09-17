@@ -16,6 +16,11 @@ gulp.task('handle:html', function () {
         //.pipe(htmlmin(config.htmloptions))
         .pipe(gulp.dest('./dist'))
 })
+gulp.task('infon', function () {
+    return gulp.src('./src/font/*/*.*')
+        //.pipe(htmlmin(config.htmloptions))
+        .pipe(gulp.dest('./dist/font'))
+})
 
 
 gulp.task('handle:css',function(){

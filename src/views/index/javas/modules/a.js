@@ -1,1 +1,1 @@
-console.log('aass是是是..ss')
+console.log('aass..ss')

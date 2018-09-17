@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../iconfont/iconfont.css" />
 		<!-- inject:css -->
  		<link rel="stylesheet" href="/index/css/common.min.css">
  		<link rel="stylesheet" href="/index/css/index.min.css">
@@ -10,8 +11,8 @@
 		
 	</head>
 	<body>
+		<div class="head-tou" id="head-tou"></div>
 		<div class="head">
-			<div class="head-tou"></div>
 				<div class="head-content">
 				<img src="mar/1 (6).png"  class="head-img">
 				<a href="#" class="head-a">我的购物车</a>
@@ -20,7 +21,7 @@
 					<a class="head-btn"/></a>
 				</div>
 			</div>
-				<ul class="head-navi">
+				<ul class="head-navi" id="navi">
 					<li><a href="#" style="background: #009fe9;">首页</a></li>
 					<li><a href="#">整车</a></li>
 					<li><a href="#">车架组</a></li>
@@ -30,8 +31,14 @@
 					<li><a href="#">淘宝</a></li>
 				</ul>
 		</div>
-		<a href="#"><img src="mar/1 (1).jpg"  class="img"/></a>
-		<div class="content">
+		<div class="box">
+			<ol>
+				<li style="z-index: 1;"><img src="mar/1.jpg"  class="img"/></li>
+				<li style="z-index: 2;"><img src="mar/2.jpg"  class="img"/></li>
+				<li style="z-index: 3;"><img src="mar/3.jpg"  class="img"/></li>
+			</ol>
+		</div>
+		<div class="content" style="padding-top: 443px;">
 			<a href="http://www.aventonchina.com/h-pd-90.html#_jcp=2"><img src="//8522754.s21i.faiusr.com/4/ABUIABAEGAAgkNHj1AUozpyG3QEwygU44QM.png" alt="ABUIABAEGAAgkNHj1AUozpyG3QEwygU44QM" style="height: 481px;display: block;float: left;"></a>
 			<div class="content-title">
 				<span>ALL NEW</span>
@@ -165,9 +172,98 @@
 					</p>
 				</div>
 		</div>
+		<!--左侧固定栏-->
+		<div class="banner">
+			<div class="banner-tou">	
+				<span>请你留言</span>
+				<ins class="banner-btn"></ins>
+			</div>
+			<div class="banner-nei">
+				<p class="banner-nei-1">AVENTON 4008-600-557</p>
+				<p class="banner-nei-2">客服微信：aventoncom</p>
+				<div class="banner-pb">
+					<textarea name="content" data-ph="请在此输入留言内容，我们会尽快与您联系。（必填）" placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" class="banner-nei-3"></textarea>
+					<div class="banner-qb">
+						<span class="banner-nei-a"></span>
+						<input type="text" placeholder="姓名"  class="banner-nei-b"/>
+					</div>
+					<div class="banner-nb">
+						<span class="banner-nei-c"></span>
+						<input type="text" placeholder="电话：(必填)"  class="banner-nei-d"/>
+					</div>
+					<ins class="banner-fooret">发送</ins>
+				</div>
+			</div>
+		</div>
+		<div class="yemei">
+			<span>请你留言</span>
+			<ins class="banner-bt"></ins>
+		</div>
+		
+		<a href="#" class="ll"><div class="title"></div></a>
+		
+		<!--右侧固定栏-->
+		<div class="column">
+			<a href="#"><div class="column-top"></div></a>
+			<a href="#" class="column-top1"><i class="iconfont icon-xing"></i></a>
+				<a>
+					<div class="column-top2">
+						<i class="iconfont icon-gouwuche"></i>
+						<span>购物车</span>
+						<p>0</p>
+					</div>
+				</a>
+			<div class="column-top3">
+				<a href="#" class="top3"><i class="iconfont icon-liuyanpinglun"></i></a>
+				<a href="#" class="top3"><i class="iconfont icon-erweima"></i></a>
+				<a href="#" class="top3"><i class="iconfont icon-shangjiantou"></i></a>
+			</div>
+		</div>
+		<script src="public.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<!-- inject:js -->
   		<script src="/index/js/index.min.js"></script>
   		<script src="/index/js/vendor.min.js"></script>
   		<!-- endinject -->
 	</body>
 </html>
+<script>
+	var h = 168;
+	var nav = document.querySelector("#head-tou");
+	window.onscroll = function(){
+		//获取页面滚走距离
+		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+		if( sTop > h ){
+			nav.style.position = "fixed";
+			nav.style.top = 0;
+		}else{
+			nav.style.position = "static";
+		}
+	}
+//	 购物车
+//	var gouwu = document.querySelector(".head-a")
+//	$(gouwu).mouseover(function(){
+//		var divs = create("div");
+//		this.style.width = 200 + "px";
+//		this.style.height = 100 + "px";
+//		this.backgroundColor = "#FFFFF";
+//		$(divs).animate("{height：200;width:400"},1000)
+//		
+//	}).mouseout(function(){
+//		gouwu.onmouseover = null;
+//		gouwu.onmouseout = null;
+//	})
+
+
+
+	var btn = document.querySelector(".banner-bt")
+	var btn1 = document.querySelector(".banner-btn")
+	btn.onclick = function(){
+		btn.parentNode.style.display = "none";
+		btn1.parentNode.parentNode.style.display = "block";
+	}
+	btn1.onclick = function(){
+		btn.parentNode.style.display = "block";
+		btn1.parentNode.parentNode.style.display = "none";
+	}
+</script>

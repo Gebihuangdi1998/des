@@ -1,4 +1,3 @@
-console.log('banner')
 //获取非行内元素样式值
 function getStyle(obj,attr){
    if( window.getComputedStyle ){
