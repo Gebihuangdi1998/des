@@ -9,11 +9,31 @@
 		
 	</head>
 	<body>
-		<div class="head-tou" id="head-tou"></div>
+		<div class="head-tou" id="head-tou">
+					<div class="head-tou-b">
+						<span class="iconfont icon-gouwuche" style="color: #FF0000;font-size: 1rem;"></span>
+						<span>购物车</span>
+						<span class="iconfont icon-xiajiantou"></span>
+						<div class="pp">
+							<p>无任何东西</p><br />
+							<a>购物车结账</a>
+						</div>
+					</div>
+					<div class="head-tou-a">
+						<a><span class="tou-a"></span></a>
+						<a><span class="tou-b"></span></a>
+						<span>其他账号：</span>
+						<div class="den">
+							<a style="background: #00A0EA;">注册</a>
+							<a>登录</a>
+						</div>
+						
+					</div>
+				</div>
 		<div class="head">
 				<div class="head-content">
 				<img src="mar/1 (6).png"  class="head-img">
-				<a href="#" class="head-a">我的购物车</a>
+				<div class="head-p"><a href="#" class="head-a ">我的购物车</a><p class="head-b iconfont icon-gouwuche"><span>你的购物车没任何东西</span></p></div>
 				<div class="head-text">
 					<input class="head-txt" type="text" style="width:500px;" placeholder="请输入关键词搜索" >
 					<a class="head-btn"/></a>
@@ -21,22 +41,23 @@
 			</div>
 				<ul class="head-navi" id="navi">
 					<li><a href="#" style="background: #009fe9;">首页</a></li>
-					<li><a href="#">整车</a></li>
+					<li><a href="#"><span>整车</span><p class="xia">自行车</p></a></li>
 					<li><a href="#">车架组</a></li>
 					<li><a href="#">配件</a></li>
-					<li><a href="#">咨询</a></li>
-					<li><a href="#">关于我们</a></li>
+					<li><a href="#"><span>咨询</span><p class="xia">骑行推广大使</p></a></li>
+					<li><a href="#"><span>关于我们</span><p class="xia">自行车</p></a></li>
 					<li><a href="#">淘宝</a></li>
 				</ul>
 		</div>
-		<div class="box">
-			<ol>
-				<li style="z-index: 1;"><img src="mar/1.jpg"  class="img"/></li>
-				<li style="z-index: 2;"><img src="mar/2.jpg"  class="img"/></li>
-				<li style="z-index: 3;"><img src="mar/3.jpg"  class="img"/></li>
-			</ol>
-		</div>
-		<div class="content" style="padding-top: 443px;">
+			<div class="box">
+				<ol>
+					<li style="z-index: 1;"><img src="mar/1.jpg"  class="img"/></li>
+					<li style="z-index: 2;"><img src="mar/2.jpg"  class="img"/></li>
+					<li style="z-index: 3;"><img src="mar/3.jpg"  class="img"/></li>
+				</ol>
+				
+			</div>
+		<div class="content Louti" >
 			<a href="http://www.aventonchina.com/h-pd-90.html#_jcp=2"><img src="//8522754.s21i.faiusr.com/4/ABUIABAEGAAgkNHj1AUozpyG3QEwygU44QM.png" alt="ABUIABAEGAAgkNHj1AUozpyG3QEwygU44QM" style="height: 481px;display: block;float: left;"></a>
 			<div class="content-title">
 				<span>ALL NEW</span>
@@ -56,7 +77,7 @@
 			</div>
 		</div>
 		
-		<div class="main">
+		<div class="main Louti">
 			<div class="main-tilie">
 				<p>专业高性能配件</p>
 				<span>帮助你骑的更快</span>
@@ -110,7 +131,7 @@
 			</div>
 		</div>
 		
-			<div class="content">
+			<div class="content Louti">
 			<a href="http://www.aventonchina.com/h-pd-91.html#_jcp=2"><img src="//8522754.s21i.faiusr.com/4/ABUIABAEGAAgi42FxQUooOmL-AIw6Ac4tgc!700x700.png" style="height: 586px;float: left;"></a>
 			<div class="content-title">
 				<span>AVENTON</span>
@@ -217,6 +238,14 @@
 				<a href="#" class="top3"><i class="iconfont icon-shangjiantou"></i></a>
 			</div>
 		</div>
+		
+		<ul class="dian">
+			<li><span>1</span></li>
+			<li><span>2</span></li>
+			<li><span>3</span></li>
+		
+		</ul>
+		<div class="top" title="回到顶部" _style="" style="right: 40px; bottom: 50px; display: block; opacity: 1;" _realmousein="0"></div>
 		<script src="public.js"></script>
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<!-- inject:js -->
@@ -224,8 +253,8 @@
 	</body>
 </html>
 <script>
-	var h = 168;
-	var nav = document.querySelector("#head-tou");
+	var h = 148;
+	var nav = document.querySelector("#navi");
 	window.onscroll = function(){
 		//获取页面滚走距离
 		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -236,19 +265,17 @@
 			nav.style.position = "static";
 		}
 	}
-//	 购物车
-//	var gouwu = document.querySelector(".head-a")
-//	$(gouwu).mouseover(function(){
-//		var divs = create("div");
-//		this.style.width = 200 + "px";
-//		this.style.height = 100 + "px";
-//		this.backgroundColor = "#FFFFF";
-//		$(divs).animate("{height：200;width:400"},1000)
-//		
-//	}).mouseout(function(){
-//		gouwu.onmouseover = null;
-//		gouwu.onmouseout = null;
-//	})
+	 //购物车
+	var gouwu = document.querySelector(".head-a")
+	var gou = document.querySelector(".head-b")
+	gouwu.onmouseover = function(){
+		gou.style.display = "block";
+		
+	}
+	gouwu.onmouseout = function(){
+		gou.style.display = "none";
+	}
+
 
 
 
@@ -262,4 +289,77 @@
 		btn.parentNode.style.display = "block";
 		btn1.parentNode.parentNode.style.display = "none";
 	}
+	
+	
+	
+	
+	$("#navi").delegate( "li","mouseover" ,function(){
+		$(this).children(0).css({
+			"background-color":"#00aef3",
+		}).children(1).css("display","block");
+		
+		
+			//$("#navi").style.background = "#fffff";
+	})
+	$("#navi").delegate("li","mouseout" ,function(){
+		$(this).children(0).css({
+			"background-color":"#2b2b2b",
+		}).children("p").css("display","none");
+		
+	})
+	
+	var $abs = $(".head-tou-b")	
+		$abs.mouseover(function(){
+			$(this).children(".pp").css("display","block");
+		}).mouseout(function(){
+			$(this).children(".pp").css("display","none");
+		})
+		
+	
+	var $head = $(".head-p")
+		$head.mouseover(function(){
+			$(this).children("p").css("display","block");
+		}).mouseout(function(){
+			$(this).children("p").css("display","none");
+		})
+		
+	//点击左侧楼层号  除了 top
+	var flag = true;
+	$(".dian li").click(function(){
+
+		$(this).find("span")
+			   .css({
+			   	"background":"chartreuse",
+			   	"display":"block",
+			   	"border-radius": "50%",
+			   	"width": "30px",
+        		"height": "30px",
+			   })
+			   .end()
+			   .siblings()
+			   .find("span")
+			   .css("background","#495348");
+			   
+		//根据当前操作的楼层号的下标  找到对应楼层距离文档顶部的 距离 
+		
+		var topHeight = $(".Louti").eq( $(this).index() ).offset().top;
+		console.log(topHeight)
+	//设置滚动条滚走的距离 为  topHeight
+		$("body,html").stop().animate({"scrollTop":topHeight},1000,function(){
+			flag = true; //点击事件动画完成后，将开关变量改变成true，让scroll滚动条事件可以继续执行
+		})
+	})
+	$(".top").click(function(){
+		flag = false;
+		$("body,html").animate({"scrollTop":0},1000,function(){
+			flag = true;
+		});
+		$(".dian li span").css({
+			"background":"#495348",
+		   	"display":"block",
+			"border-radius": "50%",
+			"width": "30px",
+	        "height": "30px",
+		});
+	})
 </script>

@@ -21,7 +21,83 @@ img {
     background: #FFFFFF;
     width: 100%;
     z-index: 63;
+        .head-tou-a{
+        width: 270px;
+        height: 35px;
+        float: right;
+        margin: 0 auto;
+        margin-right: 35px;
+        .den{
+            float: left;
+            a{
+               height: 20px;
+               width: 60px;
+               text-align: center;
+                font-size: 14px;
+               margin-top:6px;
+               border:1px #969896 solid ;
+               margin-right: 5px;
+            }
+        }
+        span{
+            font-size: 14px;
+            float: right;
+            line-height: 35px;
+        }
+        
+        a{
+            width: 30px;
+            height: 35px;
+            float: right;
+            margin: 0 auto;
+            .tou-a{
+                background: url("../mar/1 (1).png") 5px 9px no-repeat #ffffff;
+                width: 30px;
+                height: 35px;
+                display: block;
+                 margin: 0 auto;
+            }
+            .tou-b{
+                background: url("../mar/1 (1).png") -50px 9px no-repeat #ffffff;
+                width: 30px;
+                height: 35px;
+                display: block;
+                 margin: 0 auto;
+            }
+        }
+    }
+     .head-tou-b{
+        float: left;
+        margin-left: 70px;
+        margin-top: 4px;
+        span{
+            
+            font-size: 14px;
+        }
+        .pp{
+       width: 200px;
+       height: 100px; 
+       background: #FFFFFF;
+       position: absolute;
+       top: 35px;
+       left: -50px;
+       display: none;
+       p{
+           color: #64676E;
+           font-size: 14px;
+       }
+       a{
+           
+           background: #DF5000;
+           color: #FFFFFF;
+           font-size: 14px;
+           width: 100px;
+           line-height: 40px;
+        }  
+    }    
+  }
 }
+
 
 body{
     position: relative;
@@ -70,21 +146,40 @@ body{
         background-position: 20px 7px;
         cursor: pointer;
     }
-    .head-a {
-        width: 156px;
-        height: 44px;
-        display: block;
-        float: right;
-        color: rgb(145, 145, 145);
-        font-size: 12px;
-        text-decoration: none;
-        text-align: center;
-        line-height: 42px;
-        overflow: hidden;
-        margin: 33px 27px 0 35px;
-        background: url("../mar/a.png") no-repeat, url("../mar/a1.jpg") no-repeat #FFFFFF;
+    .head-p{
         background-size: 23px 21px, 7px 4px;
-        background-position: 3px 11px, 133px 21px;
+        float: right;
+        overflow: hidden;
+        .head-a {
+            width: 156px;
+            height: 44px;
+            display: block;
+            color: rgb(145, 145, 145);
+            font-size: 12px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 42px;
+            margin: 33px 27px 0 35px;
+            background: url("../../index/mar/a.png") no-repeat, url("../../index/mar/a1.jpg") no-repeat #FFFFFF;
+            background-position: 3px 11px, 133px 21px;
+        }
+        .head-b{
+            position: absolute;
+            right: 90px;
+            width: 400px;
+            height:170px;
+            background: #FFFFFF;
+            z-index: 66;
+             display: none;
+             font-size: 5rem;
+             color: #CCCCCC;
+             text-align: center;
+             padding-top: 30px;
+        }
+        span{
+            font-size: 12px;
+            color: #CCCCCC;
+        }
     }
     .head-navi {
         //导航
@@ -92,6 +187,7 @@ body{
         height: 35px;
         width: 100%;
         padding-left: 37px;
+        z-index: 63;
         li {
             float: left;
             width: 120px;
@@ -104,12 +200,20 @@ body{
                 text-decoration: none;
                 color: #eeeced;
             }
+            .xia{
+                background:#00A1EA ;
+                position: absolute;
+                width: 120px;
+                height: 35px;
+                display: none;
+                z-index: 63;
+            }
         }
     }
 }
 
 .box{
-    position:relative;
+    height: 443px;
     ol{
         position:relative;
         li{
@@ -404,6 +508,7 @@ body{
     width: 240px;
     height: 35px;
     border-radius:5px 5px 0 0 ;
+    z-index: 63;
     span{
         font-size: 14px;
         color: #FFFFFF;
@@ -426,7 +531,7 @@ body{
     position: fixed;
     left: 0;
     bottom: 0px;
- 
+    z-index: 63;
     .banner-tou{
         background: #00aef3;
         width: 240px;
@@ -664,4 +769,40 @@ body{
     }
 
 
+.dian{
+    height: 120px;
+    width: 40px;
+    position: fixed;
+    border-radius:30px ;
+    background: #00A0EA;
+    opacity:0.5;
+    right: 40px;
+    bottom: 100px;
+    z-index: 63;
+    li{
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        background: #495348;
+        color: #FFFFFF;
+        border-radius: 50%;
+        text-align: center;
+        margin:0 auto;
+        margin-top:7px ;
+       }
+}
 
+
+
+
+.top{   
+        position: fixed;
+        right: 40px;
+        bottom: 50px;
+        opacity: 1;
+        width: 41px;
+        height: 38px;
+        background: url(//g-0.ss.faisys.com/image/site/backtotop.png?v=201411241810) no-repeat;
+        z-index: 63;
+        
+}

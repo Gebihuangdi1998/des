@@ -3,14 +3,188 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../iconfont/iconfont.css" />
+		
 		<!-- inject:css -->
   		<link rel="stylesheet" href="/list/css/list.min.css">
   		<!-- endinject -->
 	</head>
 	<body>
-		<h1>我所所所所w所所wwww所所所S</h1>
+			
+				<div class="head-tou" id="head-tou">
+					<div class="head-tou-b">
+						<span class="iconfont icon-gouwuche" style="color: #FF0000;font-size: 1rem;"></span>
+						<span>
+							购物车
+						</span>
+						<span class="iconfont icon-xiajiantou"></span>
+					
+					<div class="pp">
+						<p>无任何东西</p><br />
+						<a>购物车结账</a>
+					</div>
+					</div>
+					<div class="head-tou-a">
+						<a><span class="tou-a"></span></a>
+						<a><span class="tou-b"></span></a>
+						<span>其他账号：</span>
+						<div class="den">
+							<a style="background: #00A0EA;">注册</a>
+							<a>登录</a>
+						</div>
+						
+					</div>
+				</div>
+		<div class="head">
+				<div class="head-content">
+				<img src="../index/mar/1 (6).png"  class="head-img">
+				<div class="head-p"><a href="#" class="head-a ">我的购物车</a><p class="head-b iconfont icon-gouwuche"><span>你的购物车没任何东西</span></p></div>
+				<div class="head-text">
+					<input class="head-txt" type="text" style="width:500px;" placeholder="请输入关键词搜索" >
+					<a class="head-btn"/></a>
+				</div>
+			</div>
+				<ul class="head-navi" id="navi">
+					<li><a href="#" style="background: #009fe9;">首页</a></li>
+					<li><a href="#"><span>整车</span><p class="xia">自行车</p></a></li>
+					<li><a href="#">车架组</a></li>
+					<li><a href="#">配件</a></li>
+					<li><a href="#"><span>咨询</span><p class="xia">骑行推广大使</p></a></li>
+					<li><a href="#"><span>关于我们</span><p class="xia">自行车</p></a></li>
+					<li><a href="#">淘宝</a></li>
+				</ul>
+		</div>
+		<!--左侧固定栏-->
+		<div class="banner">
+			<div class="banner-tou">	
+				<span>请你留言</span>
+				<ins class="banner-btn"></ins>
+			</div>
+			<div class="banner-nei">
+				<p class="banner-nei-1">AVENTON 4008-600-557</p>
+				<p class="banner-nei-2">客服微信：aventoncom</p>
+				<div class="banner-pb">
+					<textarea name="content" data-ph="请在此输入留言内容，我们会尽快与您联系。（必填）" placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" class="banner-nei-3"></textarea>
+					<div class="banner-qb">
+						<span class="banner-nei-a"></span>
+						<input type="text" placeholder="姓名"  class="banner-nei-b"/>
+					</div>
+					<div class="banner-nb">
+						<span class="banner-nei-c"></span>
+						<input type="text" placeholder="电话：(必填)"  class="banner-nei-d"/>
+					</div>
+					<ins class="banner-fooret">发送</ins>
+				</div>
+			</div>
+		</div>
+		<div class="yemei">
+			<span>请你留言</span>
+			<ins class="banner-bt"></ins>
+		</div>
+		
+		<a href="#" class="ll"><div class="title"></div></a>
+		
+		<!--右侧固定栏-->
+		<div class="column">
+			<a href="#"><div class="column-top"></div></a>
+			<a href="#" class="column-top1"><i class="iconfont icon-xing"></i></a>
+				<a>
+					<div class="column-top2">
+						<i class="iconfont icon-gouwuche"></i>
+						<span>购物车</span>
+						<p>0</p>
+					</div>
+				</a>
+			<div class="column-top3">
+				<a href="#" class="top3"><i class="iconfont icon-liuyanpinglun"></i></a>
+				<a href="#" class="top3"><i class="iconfont icon-erweima"></i></a>
+				<a href="#" class="top3"><i class="iconfont icon-shangjiantou"></i></a>
+			</div>
+		</div>
+		<div class="top" title="回到顶部" _style="" style="right: 40px; bottom: 50px; display: block; opacity: 1;" _realmousein="0"></div>
+		<div class="zhu">
+			<div class="zhu-head">
+				<p>会员注册</p>
+			</div>
+			<div class="zhu-he">
+					<div class="he-1">
+						<span>账号:</span><input type="text"/><span></span>
+						<span>账号:</span><input type="text"/><span></span>
+						<span>账号:</span><input type="text"/><span></span>
+						<span>账号:</span><input type="text"/><span></span>
+						<span>账号:</span><input type="text"/><span></span>
+					</div>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<!-- inject:js -->
   		<script src="/list/js/list.min.js"></script>
   		<!-- endinject -->
 	</body>
 </html>
+<script>
+	
+	
+		var h = 168;
+	var nav = document.querySelector("#head-tou");
+	window.onscroll = function(){
+		//获取页面滚走距离
+		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+		if( sTop > h ){
+			nav.style.position = "fixed";
+			nav.style.top = 0;
+		}else{
+			nav.style.position = "static";
+		}
+	}
+	
+	var btn = document.querySelector(".banner-bt")
+	var btn1 = document.querySelector(".banner-btn")
+	btn.onclick = function(){
+		btn.parentNode.style.display = "none";
+		btn1.parentNode.parentNode.style.display = "block";
+	}
+	btn1.onclick = function(){
+		btn.parentNode.style.display = "block";
+		btn1.parentNode.parentNode.style.display = "none";
+	}
+	$("#navi").delegate( "li","mouseover" ,function(){
+		$(this).children(0).css({
+			"background-color":"#00aef3",
+		}).children(1).css("display","block");
+		
+		
+			//$("#navi").style.background = "#fffff";
+	})
+	$("#navi").delegate("li","mouseout" ,function(){
+		$(this).children(0).css({
+			"background-color":"#2b2b2b",
+		}).children("p").css("display","none");
+		
+	})
+	
+	
+	
+	var $head = $(".head-p")
+		$head.mouseover(function(){
+			$(this).children("p").css("display","block");
+		}).mouseout(function(){
+			$(this).children("p").css("display","none");
+		})
+		
+		
+	var $abs = $(".head-tou-b")	
+		$abs.mouseover(function(){
+			$(this).children(".pp").animate({"scrollTop":0},1000,function(){
+			flag = true;
+		});
+			$(this).children(".pp").css("display","block");
+		}).mouseout(function(){
+			$(this).children(".pp").css("display","none");
+		})
+
+	var $fixed = $(".top") 
+		$fixed.click(function(){
+
+		})
+</script>
