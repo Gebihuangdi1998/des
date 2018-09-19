@@ -63,3 +63,37 @@ var h = 168;
 
 		})
 	
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//字符串转对象
+//							arrList = JSON.parse(arrList); //object
+//							 var cookieName = arrList[0].username;
+//							 var cookiePwd = arrList[0].userPwd;
+//							var duname = $("#den-name").val();
+//							var dpwd = $("#den-pwd").val();
+//							if( cookieName== duname && cookiePwd== dpwd){
+//								alert("登陆成功")
+//							}else{
+//								alert("用户名或密码错误");
+//							}
+//							
+//
+							

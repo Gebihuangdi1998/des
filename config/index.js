@@ -25,17 +25,33 @@
 	    },
 		    'list': {
 	        'list': [
-	          './src/stylesheets/reset.scss',
-	          './src/views/list/*/*.scss'
+	          './src/style/reset.scss',
+	          './src/views/list/*/list.scss'
+	            ],
+		    	'denlu': [
+	          './src/style/reset.scss',
+	          './src/views/list/*/denlu.scss'
 	            ]
-	        }
+	       },
+	       'car': {
+	        'car': [
+	          './src/style/reset.scss',
+	          './src/views/car/*/car.scss'
+	          ]
+	       }
     },
      jsoptions: {// js配置
         'index': { //首页的入口
             index: './src/views/index/javas/index.js',
             vendor: './src/views/index/javas/vendor.js'
         },
-        'list': './src/views/list/javas/list.js'
+        'list': {
+        	'list': './src/views/list/javas/list.js',
+        	'denlu': './src/views/list/javas/denlu.js'
+        },
+        'car': {
+        	'car': './src/views/car/javas/car.js',
+        },
     }
 }
 

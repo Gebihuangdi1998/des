@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="../iconfont/iconfont.css" />
 		
 		<!-- inject:css -->
+  		<link rel="stylesheet" href="/list/css/denlu.min.css">
   		<link rel="stylesheet" href="/list/css/list.min.css">
   		<!-- endinject -->
 	</head>
@@ -102,89 +103,262 @@
 			</div>
 		</div>
 		<div class="top" title="回到顶部" _style="" style="right: 40px; bottom: 50px; display: block; opacity: 1;" _realmousein="0"></div>
+		
 		<div class="zhu">
+			
+			<div class="den-head">
+				<p>会员登录</p>
+				<div class="den-he">
+					<table width="449" height="100px" border="0" align='center'>
+					  <tr>
+						<td width="116" align="right">账号：</td>
+						<td width="323"><label>
+						  <input type="text" name="" id="den-name" /><span id="lu"></span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">密码：</td>
+						<td><label>
+						  <input type="password" name="" id=" den-pwd" /><span id="lu-a">*</span>
+						</label></td>
+					  </tr>
+					  
+					  <tr>
+						<td height="36" colspan="2" align="center"><label>
+						  <input type="submit" value="登录" class="zhu-btn" style="width: 173px;height: 40px;background:#00A0EA ;color: #FFFFFF;"/>
+						</label></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			
+			
 			<div class="zhu-head">
 				<p>会员注册</p>
-			</div>
-			<div class="zhu-he">
-					<div class="he-1">
-						<span>账号:</span><input type="text"/><span></span>
-						<span>账号:</span><input type="text"/><span></span>
-						<span>账号:</span><input type="text"/><span></span>
-						<span>账号:</span><input type="text"/><span></span>
-						<span>账号:</span><input type="text"/><span></span>
-					</div>
+				<div class="zhu-he">
+					<table width="449" height="300px" border="0" align='center'>
+					  <tr>
+						<td width="116" align="right">账号：</td>
+						<td width="323"><label>
+						  <input type="text" name="" id="name" /><span id="tel"></span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">密码：</td>
+						<td><label>
+						  <input type="password" name="" id="pwd" /><span id="tel-a">*</span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">确认密码：</td>
+						<td><label>
+						  <input type="password" name="" id="qpwd" /><span id="tel-b">*</span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">姓名：</td>
+						<td><label>
+						  <input type="text" name="" id="te" /><span id="tel-c"></span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">邮箱：</td>
+						<td><label>
+						  <input type="text" name="" id="email" /><span id="tel-d">*</span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">手机：</td>
+						<td><label>
+							<select id="mobileCt" name="mobileCt" class="userAddItem isCheckUAI" style="width:60px;float:left;"><option value="ch">中国大陆+86</option><option value="hk">香港+852</option><option value="mc">澳门+853</option><option value="tw">台湾+886</option><option value="kr">韩国+82</option><option value="jp">日本+81</option><option value="ac">美国+1</option><option value="cnd">加拿大+1</option><option value="el">英国+44</option><option value="mls">马来西亚+60</option><option value="tl">泰国+66</option><option value="vtn">越南+84</option><option value="fc">法国+33</option><option value="plp">菲律宾+63</option><option value="idns">印度尼西亚+62</option><option value="itl">意大利+39</option><option value="rs">俄罗斯+7</option><option value="zl">新西兰+64</option><option value="nl">荷兰+31</option><option value="swd">瑞典+46</option><option value="atl">澳大利亚+61</option><option value="gm">德国+49</option><option value="snp">新加坡+65</option><option value="fld">芬兰+358</option><option value="dmk">丹麦+45</option><option value="isr">以色列+00972</option></select>
+						  <input type="text" name="" id="eml"  style="margin-left: 13px;width: 100px;"/><span id="tel-e">*</span>
+						</label></td>
+					  </tr>
+					 <tr>
+						<td align="right">留言：</td>
+						
+						<td><label>
+						 <textarea maxlength="200" style="width: 173px;"></textarea><span>*</span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td height="36" colspan="2" align="center"><label>
+						  <input type="button" value="注册" class="zhu-btn" style="width: 173px;height: 40px;background:#00A0EA ;color: #FFFFFF;"/>
+						</label></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
+		
 		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 		<!-- inject:js -->
+  		<script src="/list/js/denlu.min.js"></script>
   		<script src="/list/js/list.min.js"></script>
   		<!-- endinject -->
 	</body>
 </html>
 <script>
+	var unameFlag = false;
+	var upwdFlag = false;
+
+	$("#name").blur(function() {
+				var reg = /^\d{5,10}$/;
+				var str = $("#name").val()
+				//let newstr = `<p style="color:red;font-size:12px;">手机号有误</p>`
+				if(!reg.test(str)) {
+					$("#tel").html("账号错误")
+				} else {
+					unameFlag = true;
+					$("#tel").html("*").css("color","green")
+				}
+			})
+	$("#pwd").blur(function() {
+			
+				var str = $("#pwd").val()
+				var reg = /^\w{6,16}$/
+				console.log(str)
+				console.log(reg.test(str))
+				if(!reg.test(str)) {
+					$("#tel-a").html("密码错误")
+					return;
+				} else {
+					upwdFlag = true;
+					$("#tel-a").html("*").css("color","green")
+					return;
+				}
+			})
 	
-	
-		var h = 168;
-	var nav = document.querySelector("#head-tou");
-	window.onscroll = function(){
-		//获取页面滚走距离
-		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
-		if( sTop > h ){
-			nav.style.position = "fixed";
-			nav.style.top = 0;
+	$("#qpwd").blur(function(){
+		var $qstr = $("#qpwd").val()
+		var $str = $("#pwd").val()
+		if($qstr != ""){
+			if( $str != $qstr ){
+				$("#tel-b").html("和上一次输如密码不一致") 
+				return
+			}else{
+				$("#tel-b").html("*").css("color","green")
+				uqpwdFlag = true;
+				return;
+			}
 		}else{
-			nav.style.position = "static";
+			$("#tel-b").html("不能为空")
 		}
-	}
-	
-	var btn = document.querySelector(".banner-bt")
-	var btn1 = document.querySelector(".banner-btn")
-	btn.onclick = function(){
-		btn.parentNode.style.display = "none";
-		btn1.parentNode.parentNode.style.display = "block";
-	}
-	btn1.onclick = function(){
-		btn.parentNode.style.display = "block";
-		btn1.parentNode.parentNode.style.display = "none";
-	}
-	$("#navi").delegate( "li","mouseover" ,function(){
-		$(this).children(0).css({
-			"background-color":"#00aef3",
-		}).children(1).css("display","block");
-		
-		
-			//$("#navi").style.background = "#fffff";
 	})
-	$("#navi").delegate("li","mouseout" ,function(){
-		$(this).children(0).css({
-			"background-color":"#2b2b2b",
-		}).children("p").css("display","none");
-		
-	})
-	
-	
-	
-	var $head = $(".head-p")
-		$head.mouseover(function(){
-			$(this).children("p").css("display","block");
-		}).mouseout(function(){
-			$(this).children("p").css("display","none");
-		})
-		
-		
-	var $abs = $(".head-tou-b")	
-		$abs.mouseover(function(){
-			$(this).children(".pp").animate({"scrollTop":0},1000,function(){
-			flag = true;
-		});
-			$(this).children(".pp").css("display","block");
-		}).mouseout(function(){
-			$(this).children(".pp").css("display","none");
-		})
 
-	var $fixed = $(".top") 
-		$fixed.click(function(){
-
-		})
+	$("#te").blur(function() {
+				var reg = /^[\u4e00-\u9fa5]+$/;
+				var str = $("#te").val()
+				if(!reg.test(str)) {
+					$("#tel-c").html("不能是字符")
+				} else {
+					uteFlag = true;
+					$("#tel-c").html("*").css("color","green")
+				}
+			})
+	
+	
+	$("#email").blur(function() {
+				var reg = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+				var str = $("#email").val()
+				if(!reg.test(str)) {
+					$("#tel-d").html("只能是xxxxxxx@xxx.com格式")
+				} else {
+					uemaFlag = true;
+					$("#tel-d").html("*").css("color","green")
+				}
+			})
+	
+	$("#eml").blur(function() {
+				var reg = /^[1][0-9]{10}$/;
+				var str = $("#eml").val()
+				if(!reg.test(str)) {
+					$("#tel-e").html("手机格式不对")
+				} else {
+					uemlFlag = true;
+					$("#tel-e").html("*").css("color","green")
+					
+				}
+			})
+	
+	
+		$(".zhu-btn").click(function() {
+				if(unameFlag && upwdFlag) {
+					var user = [];
+					var username = $("#name").val();
+					var userpwd = $("#pwd").val();
+					user.push({
+						"username": username,
+						"userPwd": userpwd
+					})
+					console.log(user)
+					document.cookie = "userlist=" + JSON.stringify(user);
+					alert("注册成功")
+					location.href = "denlu.html"
+				}
+			})
+	
+//		var h = 168;
+//	var nav = document.querySelector("#head-tou");
+//	window.onscroll = function(){
+//		//获取页面滚走距离
+//		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+//		if( sTop > h ){
+//			nav.style.position = "fixed";
+//			nav.style.top = 0;
+//		}else{
+//			nav.style.position = "static";
+//		}
+//	}
+//	
+//	var btn = document.querySelector(".banner-bt")
+//	var btn1 = document.querySelector(".banner-btn")
+//	btn.onclick = function(){
+//		btn.parentNode.style.display = "none";
+//		btn1.parentNode.parentNode.style.display = "block";
+//	}
+//	btn1.onclick = function(){
+//		btn.parentNode.style.display = "block";
+//		btn1.parentNode.parentNode.style.display = "none";
+//	}
+//	$("#navi").delegate( "li","mouseover" ,function(){
+//		$(this).children(0).css({
+//			"background-color":"#00aef3",
+//		}).children(1).css("display","block");
+//		
+//		
+//			//$("#navi").style.background = "#fffff";
+//	})
+//	$("#navi").delegate("li","mouseout" ,function(){
+//		$(this).children(0).css({
+//			"background-color":"#2b2b2b",
+//		}).children("p").css("display","none");
+//		
+//	})
+//	
+//	
+//	
+//	var $head = $(".head-p")
+//		$head.mouseover(function(){
+//			$(this).children("p").css("display","block");
+//		}).mouseout(function(){
+//			$(this).children("p").css("display","none");
+//		})
+//		
+//		
+//	var $abs = $(".head-tou-b")	
+//		$abs.mouseover(function(){
+//			$(this).children(".pp").animate({"scrollTop":0},1000,function(){
+//			flag = true;
+//		});
+//			$(this).children(".pp").css("display","block");
+//		}).mouseout(function(){
+//			$(this).children(".pp").css("display","none");
+//		})
+//
+//	var $fixed = $(".top") 
+//		$fixed.click(function(){
+//
+//		})
 </script>

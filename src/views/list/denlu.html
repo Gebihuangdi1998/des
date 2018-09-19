@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../iconfont/iconfont.css" />
+  		<link rel="stylesheet" href="./css/denlu.min.css">
+  		
+		
 		<!-- inject:css -->
-  		<link rel="stylesheet" href="/car/css/car.min.css">
   		<!-- endinject -->
 	</head>
 	<body>
-		<div class="head-tou" id="head-tou">
+			
+				<div class="head-tou" id="head-tou">
 					<div class="head-tou-b">
 						<span class="iconfont icon-gouwuche" style="color: #FF0000;font-size: 1rem;"></span>
 						<span>
@@ -99,23 +103,110 @@
 			</div>
 		</div>
 		<div class="top" title="回到顶部" _style="" style="right: 40px; bottom: 50px; display: block; opacity: 1;" _realmousein="0"></div>
-		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-		
-		<img src="../index/mar/2 (2).jpg" class="car-img"/>
-		<div class="title"><p>AVENTON</p></div>
-		<div class="main">
-			<div class="main-log">
-				<div class="main-kuai">
-					<img src="../index/mar/2 (4).jpg"/>
-					<a href="h-pd-90.html#_pp=105_414" target="_blank" title="Aventon Cordoba科多巴 2018 整车">Aventon Cordoba科多巴 2018 整车</a>
-					<div class="main-size"><span style="margin-left: 90px;">￥</span><span>2999</span></div>
+		<div class="zhu">
+			<div class="den-head">
+				<p>会员登录</p>
+				<div class="den-he">
+					<table width="449" height="100px" border="0" align='center'>
+					  <tr>
+						<td width="116" align="right">账号：</td>
+						<td width="323"><label>
+						  <input type="text" name="" id="den-name" /><span id="lu"></span>
+						</label></td>
+					  </tr>
+					  <tr>
+						<td align="right">密码：</td>
+						<td><label>
+						  <input type="password" name="" id="den-pwd" /><span id="lu-a"></span>
+						</label></td>
+					  </tr>
+					  
+					  <tr>
+						<td height="36" colspan="2" align="center"><label>
+							<div class="alert"></div>
+						  <input type="button" value="登录" class="dapigu" style="width: 173px;height: 40px;background:#00A0EA ;color: #FFFFFF;"/>
+						</label></td>
+						</tr>
+					</table>
 				</div>
-				
 			</div>
 		</div>
+		<div class="footer">
+			<div class="footer-tou">
+				<ul>
+					<li style='background:url("mar/1 (12).png") no-repeat 80px 3px'>售后服务</li>
+					<li style='background:url("mar/1 (13).png") no-repeat 65px 3px'>7天无理由退货</li>
+					<li style='background:url("mar/1 (14).png") no-repeat 67px 3px'>满199元包邮</li>
+					<li  style='background:url("mar/1 (16).png") no-repeat 67px 3px;border: 0;'>实物真实拍摄</li>
+				</ul>
+			</div>
+			<div class="footer-shen">
+				<div class="zuo">
+					<ul style="padding-left:100px;">
+						<li><a href="#">服务支持</a></li>
+						<li><a href="#">售后服务</a></li>
+						<li><a href="#">自助服务</a></li>
+					</ul>
+					<ul>
+						<li>联系我们</li>
+						<li>注册会员</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关于我们</li>
+						<li>了接我们</li>
+						<li>加入我们</li>
+					</ul>
+				</div>
+				<div class="you">
+					<img src="//8522754.s21i.faiusr.com/4/ABUIABAEGAAgwbOfxQUolIKEuAQwrgM4rgM!160x160.png" alt="ABUIABAEGAAgwbOfxQUolIKEuAQwrgM4rgM" style="height: 118px;margin: 37px 0 0 80px;float: left;">
+					<div class="you-b">
+						<p>服务热线：4008-600-557</p>
+						<p>微信客服：aventoncom</p>
+						<p style="color: #414d49;">新浪微博：http://weibo.com//acenton</p>
+					</div>
+				</div>
+			</div>
+				<div class="ba">
+					<p>2017 Aventon 中国 版权所有</p>
+					<p>浙ICP备15045485号-1</p>
+					<p class="wei-a">
+						<span><a hidefocus="true" href="http://m.aventonchina.com" target="_blank">手机版</a></span>
+						<span>|</span>
+						<span><a href="//adm.webportal.top?cacct=jhbikes" >管理登录</a></span>
+					</p>
+				</div>
+		</div>
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<script src="./js/denlu.min.js"></script>
 			
 		<!-- inject:js -->
-  		<script src="/car/js/car.min.js"></script>
   		<!-- endinject -->
 	</body>
 </html>
+<script>
+						$(".dapigu").click(function() {
+							var str = document.cookie;
+							var arr = str.split("; ");
+							for(var i = 0; i < arr.length; i++) {
+								var item = arr[i].split("=");
+								if(item[0] == "userlist") {
+									oList = item[1];
+									
+								}
+							}
+							arrList = JSON.parse(oList); //object
+							 var cookieName = arrList[0].username;
+							 var cookiePwd = arrList[0].userPwd;
+							var duname = $("#den-name").val();
+							var dpwd = $("#den-pwd").val();
+								if( cookieName == duname && cookiePwd == dpwd ){
+										alert("登录成功");
+										location.href = "../index/index.html"
+									}else{
+										alert("用户名或密码错误");
+									}
+							})
+
+</script>

@@ -1,5 +1,3 @@
-require('./modules/a')
-console.log('thi is lit杀手=。-。。。=s')
 var h = 168;
 	var nav = document.querySelector("#head-tou");
 	window.onscroll = function(){
@@ -62,4 +60,22 @@ var h = 168;
 		$fixed.click(function(){
 
 		})
-	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

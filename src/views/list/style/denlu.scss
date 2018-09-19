@@ -500,32 +500,10 @@ body{
 
 .zhu{
     width: 100%;
-    .zhu-head{
-        margin-left:50px ;
-        height:48px;
-        width: 1200px;
-        float: left;
-        border-bottom: #919191 1px solid;
-        p{
-            color: #00A0EA;
-            border-bottom: #00A1EA 1px solid ;
-            line-height: 47px;
-            width: 100px;
-            text-indent: 10px;
-        }
-        table{
-            
-        }
-        .zhu-he{
-            width: 380px;
-            height: 400px;
-            margin: 0 auto;
-
-        }
-    }
+    height: 500px;
+    margin: 0 auto;
     .den-head{
-        display: none;
-        float: left;
+
         margin-left:50px ;
         height:48px;
         width: 1200px;
@@ -538,13 +516,23 @@ body{
             text-indent: 10px;
         }
         .den-he{
+            margin-top: 20px;
             width: 380px;
             height: 400px;
             margin: 0 auto;
-
+            table{
+                margin-top: 50px;
+            }
+            .dapigu{
+                float: left;
+                margin-left: 100px;
+            }
         }
     }
 }
+
+
+
 
 
 
