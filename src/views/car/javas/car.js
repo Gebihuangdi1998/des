@@ -48,9 +48,7 @@ var h = 168;
 		
 	var $abs = $(".head-tou-b")	
 		$abs.mouseover(function(){
-			$(this).children(".pp").animate({"scrollTop":0},1000,function(){
-			flag = true;
-		});
+			$(this).children(".pp").animate({"scrollTop":0},1000);
 			$(this).children(".pp").css("display","block");
 		}).mouseout(function(){
 			$(this).children(".pp").css("display","none");

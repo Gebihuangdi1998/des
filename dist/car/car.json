@@ -1,0 +1,31 @@
+{
+	"classify001":{
+		"name" : "死飞",
+		"list" : [
+			{
+				"id" : "sf01",
+				"name" : "Aventon Cordoba科多巴 2018 整车",
+				"src" : "2 (4).jpg",
+				"price" : "2999"
+			},
+			{
+				"id" : "sf02",
+				"name" : "Mataro Low整车",
+				"src" : "2 (3).jpg",
+				"price" : "2999"
+			},
+			{
+				"id" : "sf03",
+				"name" : "AVENTON Cordoba 整车 2015",
+				"src" : "2 (1).jpg",
+				"price" : "2699"
+			},
+			{
+				"id" : "sf04",
+				"name" : "Mataro整车",
+				"src" : "img.jpg",
+				"price" : "2999"
+			}
+		]
+	}
+}

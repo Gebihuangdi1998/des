@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../iconfont/iconfont.css" />
+		
 		<!-- inject:css -->
   		<!-- endinject -->
 	</head>
@@ -42,7 +44,7 @@
 			</div>
 				<ul class="head-navi" id="navi">
 					<li><a href="#" style="background: #009fe9;">首页</a></li>
-					<li><a href="#"><span>整车</span><p class="xia">自行车</p></a></li>
+					<li><a href="#"><span>整车</span><p class="xia" >自行车</p></a></li>
 					<li><a href="#">车架组</a></li>
 					<li><a href="#">配件</a></li>
 					<li><a href="#"><span>咨询</span><p class="xia">骑行推广大使</p></a></li>
@@ -104,16 +106,86 @@
 		<div class="title"><p>AVENTON</p></div>
 		<div class="main">
 			<div class="main-log">
-				<div class="main-kuai">
+				<!--<div class="main-kuai">
 					<img src="../index/mar/2 (4).jpg"/>
 					<a href="h-pd-90.html#_pp=105_414" target="_blank" title="Aventon Cordoba科多巴 2018 整车">Aventon Cordoba科多巴 2018 整车</a>
 					<div class="main-size"><span style="margin-left: 90px;">￥</span><span>2999</span></div>
-				</div>
+				</div>-->
 				
 			</div>
 		</div>
+		<div class="footer">
+			<div class="footer-tou">
+				<ul>
+					<li style='background:url("../index/mar/1 (12).png") no-repeat 80px 3px'>售后服务</li>
+					<li style='background:url("../index/mar/1 (13).png") no-repeat 65px 3px'>7天无理由退货</li>
+					<li style='background:url("../index/mar/1 (14).png") no-repeat 67px 3px'>满199元包邮</li>
+					<li  style='background:url("../index/mar/1 (16).png") no-repeat 67px 3px;border: 0;'>实物真实拍摄</li>
+				</ul>
+			</div>
+			<div class="footer-shen">
+				<div class="zuo">
+					<ul style="padding-left:100px;">
+						<li><a href="#">服务支持</a></li>
+						<li><a href="#">售后服务</a></li>
+						<li><a href="#">自助服务</a></li>
+					</ul>
+					<ul>
+						<li>联系我们</li>
+						<li>注册会员</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关于我们</li>
+						<li>了接我们</li>
+						<li>加入我们</li>
+					</ul>
+				</div>
+				<div class="you">
+					<img src="//8522754.s21i.faiusr.com/4/ABUIABAEGAAgwbOfxQUolIKEuAQwrgM4rgM!160x160.png" alt="ABUIABAEGAAgwbOfxQUolIKEuAQwrgM4rgM" style="height: 118px;margin: 37px 0 0 80px;float: left;">
+					<div class="you-b">
+						<p>服务热线：4008-600-557</p>
+						<p>微信客服：aventoncom</p>
+						<p style="color: #414d49;">新浪微博：http://weibo.com//acenton</p>
+					</div>
+				</div>
+			</div>
+				<div class="ba">
+					<p>2017 Aventon 中国 版权所有</p>
+					<p>浙ICP备15045485号-1</p>
+					<p class="wei-a">
+						<span><a hidefocus="true" href="http://m.aventonchina.com" target="_blank">手机版</a></span>
+						<span>|</span>
+						<span><a href="//adm.webportal.top?cacct=jhbikes" >管理登录</a></span>
+					</p>
+				</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 			
 		<!-- inject:js -->
   		<!-- endinject -->
 	</body>
 </html>
+<script>
+	window.onload = function(){
+		$.ajax({
+			type:"get",
+			url:"car.json",
+			success:function(json){
+				var page = "";
+				var cons = "";
+				for( var cname in json ){
+					for( var j = 0 ; j < json[cname].list.length ; j++ ){
+						var pro = json[cname].list[j];
+							cons +=`<div class="main-kuai">
+										<img src="../index/mar/${pro.src}"/>
+										<a href="h-pd-90.html#_pp=105_414" target="_blank" title="Aventon Cordoba科多巴 2018 整车">${pro.name}</a>
+										<div class="main-size"><span style="margin-left: 90px;">￥</span><span>${pro.price}</span></div>
+									</div>`
+					}
+				}
+				$(".main-log").html(cons);
+			}
+		});
+	}
+</script>
