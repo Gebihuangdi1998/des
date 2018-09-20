@@ -288,12 +288,14 @@
 					var user = [];
 					var username = $("#name").val();
 					var userpwd = $("#pwd").val();
+					var now = new Date();
+					now.setDate( now.getDate() + 7 );
 					user.push({
 						"username": username,
 						"userPwd": userpwd
 					})
 					console.log(user)
-					document.cookie = "userlist=" + JSON.stringify(user);
+					document.cookie = "userlist=" + JSON.stringify(user)+";expires="+now;
 					alert("注册成功")
 					location.href = "denlu.html"
 				}
